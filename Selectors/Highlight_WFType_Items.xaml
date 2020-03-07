@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Highlight_WFType_Items" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="476,1383" sap2010:WorkflowViewState.IdRef="Highlight_WFType_Items_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Highlight_WFType_Items" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="550,1261" sap2010:WorkflowViewState.IdRef="Highlight_WFType_Items_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
       <x:String>System.Activities</x:String>
@@ -47,7 +47,7 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Attach to ACME site and highlight the selected type of work items" DisplayName="Highlight_WFType_Items" sap:VirtualizedContainerService.HintSize="436,1263" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Attach to ACME site and highlight the selected type of work items" DisplayName="Highlight_WFType_Items" sap:VirtualizedContainerService.HintSize="530,1161" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="https://acme-test.uipath.com/work-items" Name="ACME_website" />
       <Variable x:TypeArguments="x:String" Default="&lt;html title='ACME System 1*' /&gt;&lt;webctrl tag='HTML' /&gt;" Name="ACME_generic" />
@@ -60,7 +60,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog sap2010:Annotation.AnnotationText="Choose workitem type" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="414,120" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select type:" Options="[{&quot;WI1&quot;,&quot;WI2&quot;,&quot;WI3&quot;,&quot;WI4&quot;,&quot;WI5&quot;}]" Title="WI type">
+    <ui:InputDialog sap2010:Annotation.AnnotationText="Choose workitem type" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="488,119" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select type:" Options="[{&quot;WI1&quot;,&quot;WI2&quot;,&quot;WI3&quot;,&quot;WI4&quot;,&quot;WI5&quot;}]" Title="WI type">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="ui:GenericValue">[SelectedValue]</OutArgument>
       </ui:InputDialog.Result>
@@ -70,13 +70,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach ACME website" sap:VirtualizedContainerService.HintSize="414,951" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="a5ccfc707ae2f7b569643917232f99e4" Selector="&lt;html title='ACME System 1*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach ACME website" sap:VirtualizedContainerService.HintSize="488,883" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="a5ccfc707ae2f7b569643917232f99e4" Selector="&lt;html title='ACME System 1*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="374,805" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,737" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="FoundChildren" />
               <Variable x:TypeArguments="x:Boolean" Name="NextPageExists" />
@@ -86,25 +86,29 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:NavigateTo Browser="{x:Null}" sap2010:Annotation.AnnotationText="Navigate to ACME work items page" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="352,87" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[ACME_website]">
+            <ui:NavigateTo Browser="{x:Null}" sap2010:Annotation.AnnotationText="Navigate to ACME work items page" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="412,86" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[ACME_website]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:NavigateTo>
-            <ui:FindChildren Children="[FoundChildren]" DisplayName="Find work item childrens" Filter="[&quot;&lt;webctrl aaname='&quot;+SelectedValue+&quot;'/&gt;&quot;]" sap:VirtualizedContainerService.HintSize="352,106" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
+            <ui:FindChildren Children="[FoundChildren]" DisplayName="Find work item childrens" Filter="[&quot;&lt;webctrl aaname='&quot;+SelectedValue+&quot;'/&gt;&quot;]" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
               <ui:FindChildren.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f976153b8daea1b6308f4f60c0be486f" Selector="&lt;webctrl tag='DIV' parentclass='main-container' /&gt;" WaitForReady="INTERACTIVE" />
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f976153b8daea1b6308f4f60c0be486f" Selector="&lt;webctrl tag='DIV' parentclass='main-container' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Highlight each item from 1st page (taking the desired type into account)" DisplayName="For Each UI item" sap:VirtualizedContainerService.HintSize="352,408" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[FoundChildren]">
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Highlight each item from 1st page (taking the desired type into account)" DisplayName="For Each UI item" sap:VirtualizedContainerService.HintSize="412,373" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[FoundChildren]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="ui:UiElement">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:UiElement" Name="UIItem" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="336,230" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="ui:GenericValue" Name="TheAttribute" />
                     </Sequence.Variables>
@@ -113,9 +117,13 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Highlight Color="Red" DisplayName="Highlight work item" HighlightTime="1000" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Highlight_2">
+                    <ui:Highlight Color="Red" DisplayName="Highlight work item" HighlightTime="1000" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Highlight_2">
                       <ui:Highlight.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[UIItem]" InformativeScreenshot="c29edb8f5b995781887fedf5f1c995c9" WaitForReady="INTERACTIVE" />
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[UIItem]" InformativeScreenshot="c29edb8f5b995781887fedf5f1c995c9" WaitForReady="INTERACTIVE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
                       </ui:Highlight.Target>
                     </ui:Highlight>
                   </Sequence>
